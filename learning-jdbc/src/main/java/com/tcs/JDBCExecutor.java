@@ -14,7 +14,8 @@ public class JDBCExecutor {
 			Statement stm = con.createStatement();
 			ResultSet rst = stm.executeQuery(FUN);
 			while(rst.next()) {
-				System.out.println(rst.getInt(1));
+				Product pr = new Product (rst.getInt(1),rst.getString(2));
+				System.out.println(pr);
 			}
 		}
 		catch(Exception e) {

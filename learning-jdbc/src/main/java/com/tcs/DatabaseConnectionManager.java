@@ -8,7 +8,7 @@ public class DatabaseConnectionManager {
 	
 	public DatabaseConnectionManager(String host, String databaseName, 
 			String usrnm,String psw) {
-		this.url= "jdbc::mysql://"+host+"/"+databaseName;
+		this.url= "jdbc:mysql://"+host+"/"+databaseName;
 		this.pro = new Properties ();
 		this.pro.setProperty("user", usrnm);
 		this.pro.setProperty("password", psw);
